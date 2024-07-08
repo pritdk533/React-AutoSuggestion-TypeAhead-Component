@@ -1,0 +1,131 @@
+/* Base Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App-h1 {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  transform: translateY(20px);
+}
+.App-h1 > span {
+  color: #00aaff;
+}
+
+.container {
+  position: relative;
+  width: 30%;
+  margin: 2% auto;
+}
+
+.container > input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.container > input:focus {
+  border: 2px solid #00aaff; /* Change border color on focus */
+  outline: none; /* Remove default focus outline */
+}
+
+.loading,
+.error {
+  padding: 10px;
+  font-size: 14px;
+  color: #ff5e5e; /* Red color for errors */
+}
+
+.no-response {
+  position: relative;
+  width: 100%;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: none;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.suggestion-list-ul {
+  position: relative;
+  width: 100%;
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: none;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.suggestion-list-li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.suggestion-list-li:hover {
+  background-color: #333;
+}
+
+.highlighted-text {
+  color: #00aaff; /* Light blue color for highlighted text */
+}
+
+.features {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+  width: 50%;
+  transform: translateY(30px);
+  margin: 0 auto;
+}
+.features h3 {
+  color: #efefef;
+  margin-bottom: 20px;
+}
+
+.features > ul > li {
+  padding: 10px 0 10px 0;
+}
+.features > ul > li > ul > li {
+  word-break: break-all;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px 0 5px 120px;
+}
+
+.features > ul > li > p {
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #00aaff;
+}
