@@ -10,6 +10,16 @@ body {
   color: #e0e0e0;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
+  overflow-y: auto; /* Prevent horizontal scroll */
+}
+
+.App {
+  min-height: 100vh; /* Ensure the app takes full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-h1 {
@@ -17,14 +27,16 @@ body {
   text-align: center;
   transform: translateY(20px);
 }
+
 .App-h1 > span {
   color: #00aaff;
 }
 
 .container {
   position: relative;
-  width: 30%;
-  margin: 2% auto;
+  width: 90%;
+  max-width: 600px;
+  margin: 5% auto 2% auto;
 }
 
 .container > input {
@@ -39,15 +51,15 @@ body {
 }
 
 .container > input:focus {
-  border: 2px solid #00aaff; /* Change border color on focus */
-  outline: none; /* Remove default focus outline */
+  border: 2px solid #00aaff;
+  outline: none;
 }
 
 .loading,
 .error {
   padding: 10px;
   font-size: 14px;
-  color: #ff5e5e; /* Red color for errors */
+  color: #ff5e5e;
 }
 
 .no-response {
@@ -98,25 +110,29 @@ body {
 }
 
 .highlighted-text {
-  color: #00aaff; /* Light blue color for highlighted text */
+  color: #00aaff;
 }
 
 .features {
   color: rgba(255, 255, 255, 0.5);
-  padding: 30px;
-  width: 50%;
-  transform: translateY(30px);
+  padding: 5px 30px 30px 30px;
+  width: 90%;
+  max-width: 800px;
+  /* transform: translateY(30px); */
   margin: 0 auto;
 }
+
 .features h3 {
   color: #efefef;
   margin-bottom: 20px;
 }
 
 .features > ul > li {
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
 }
+
 .features > ul > li > ul > li {
+  font-size: 14px;
   word-break: break-all;
   list-style: none;
   color: rgba(255, 255, 255, 0.8);
@@ -128,4 +144,31 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: #00aaff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .features {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .features {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .features > ul > li > ul > li {
+    padding: 5px 0 5px 20px;
+  }
 }
